@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
-import { navItems, links, profile, type SectionKey } from "../../data/portfolioData";
+import { navItems, profile, type SectionKey } from "../../data/portfolioData";
 import ThemeToggle from "../ui/ThemeToggle";
 
 interface NavBarProps {
@@ -62,22 +62,7 @@ export default function NavBar({ activeSection, onNavigate }: NavBarProps) {
             </button>
           ))}
         </nav>
-        <div className="hidden lg:flex items-center gap-3">
-          <ThemeToggle />
-          <a
-            href={links.resume}
-            download
-            className="rounded-full border border-[var(--border-color)] px-4 py-2 text-sm text-[var(--text-secondary)] transition hover:border-[var(--accent-primary)] hover:text-[var(--text-primary)]"
-          >
-            Download CV
-          </a>
-          <button
-            onClick={() => handleNavigate("contact")}
-            className="rounded-full bg-emerald-500 px-4 py-2 text-sm font-medium text-white shadow-[0_0_24px_rgba(16,185,129,0.55)] transition hover:bg-emerald-400"
-          >
-            Contact
-          </button>
-        </div>
+
         <div className="lg:hidden flex items-center gap-3">
           <ThemeToggle />
           <button

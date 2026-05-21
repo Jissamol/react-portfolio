@@ -41,11 +41,17 @@ export interface Education {
 export interface Certificate {
   title: string;
   note?: string;
+  image?: string;
 }
 
 export interface Achievement {
   title: string;
   details: string;
+}
+
+export interface Stat {
+  label: string;
+  value: string;
 }
 
 export const profile = {
@@ -68,7 +74,7 @@ export const links = {
 export const summary =
   "MCA student graduating in 2026 with hands-on experience in full-stack development using Python, Django, React, and REST APIs. Built scalable web applications including AI-powered travel planning, academic management, and e-commerce systems. Strong interest in backend engineering, AI applications, and modern software development.";
 
-export const stats = [
+export const stats: Stat[] = [
   { label: "Projects Delivered", value: "4+" },
   { label: "Tech Stack", value: "Full Stack" },
   { label: "CGPA", value: "8.5" },
@@ -131,6 +137,7 @@ export const projects: Project[] = [
       "Collaborative trip sharing with tokenized access.",
       "Packing checklist generated from weather and duration.",
     ],
+    image: "https://static.vecteezy.com/system/resources/thumbnails/076/001/647/small/travelgraphy-and-woman-with-suitcase-and-camera-in-city-for-weekend-holiday-and-vacation-traveling-journey-and-girlgrapher-in-urban-town-with-luggage-for-adventure-tourism-and-relax-photo.jpg",
   },
 ];
 
@@ -177,8 +184,14 @@ export const education: Education[] = [
 ];
 
 export const certificates: Certificate[] = [
-  { title: "Data Visualization Using Python" },
-  { title: "Data Science Tools" },
+  { 
+    title: "Data Visualization Using Python",
+    image: require("../assets/images/python.jpeg")
+  },
+  { 
+    title: "Data Science Tools",
+    image: require("../assets/images/data science tools_page-0001.jpg")
+  },
   { title: "National Service Scheme (NSS)" },
 ];
 

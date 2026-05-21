@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { Github, Linkedin, Mail, Code2, Download } from "lucide-react";
 import SectionHeader from "../ui/SectionHeader";
 import { itemVariants, sectionVariants, staggerContainer } from "../ui/motion";
-import { links, profile } from "../../data/portfolioData";
+import { links } from "../../data/portfolioData";
 
 interface ContactProps {
   sectionRef: React.RefObject<HTMLElement | null>;
