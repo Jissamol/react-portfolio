@@ -58,9 +58,19 @@ export default function Projects({ sectionRef }: ProjectsProps) {
               className="group rounded-3xl border border-[var(--border-color)] bg-[var(--bg-secondary)]/50 p-6 backdrop-blur-xl transition"
             >
               <div className="relative mb-5 h-40 overflow-hidden rounded-2xl border border-[var(--border-color)] bg-gradient-to-br from-slate-800 via-slate-700 to-slate-900 dark:from-slate-900 dark:via-slate-800 dark:to-slate-950">
-                <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(56,189,248,0.3),_transparent_60%)]" />
-                <div className="absolute inset-0 bg-[linear-gradient(120deg,_rgba(244,114,182,0.2),_transparent_60%)]" />
-                <div className="absolute bottom-4 left-4 text-xs uppercase tracking-[0.35em] text-[var(--text-secondary)]">
+                {project.image ? (
+                  <img 
+                    src={project.image} 
+                    alt={project.title}
+                    className="h-full w-full object-cover"
+                  />
+                ) : (
+                  <>
+                    <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(56,189,248,0.3),_transparent_60%)]" />
+                    <div className="absolute inset-0 bg-[linear-gradient(120deg,_rgba(244,114,182,0.2),_transparent_60%)]" />
+                  </>
+                )}
+                <div className="absolute bottom-4 left-4 text-xs uppercase tracking-[0.35em] text-white bg-black/40 px-2 py-1 rounded">
                   {project.category}
                 </div>
                 <div className="absolute inset-0 opacity-0 transition group-hover:opacity-100">

@@ -16,6 +16,7 @@ export interface Project {
   category: "Full Stack" | "AI" | "Backend";
   highlights: string[];
   links?: { label: string; href: string }[];
+  image?: string;
 }
 
 export interface SkillGroup {
@@ -117,6 +118,7 @@ export const projects: Project[] = [
       "Role-based access and automated PBAS reports.",
       "Responsive interface optimized for admin workflows.",
     ],
+    image: "https://media.gettyimages.com/id/2196132633/photo/back-view-of-elementary-teacher-talking-about-lecture-on-a-class.jpg?s=612x612&w=0&k=20&c=eAxNLYvGTYECtgcRW1K6rNZ61-GUD-oI6RsDgQPEEdQ=",
   },
   {
     title: "Travel Buddy (AI Travel Planning Platform)",
