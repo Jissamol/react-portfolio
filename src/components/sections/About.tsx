@@ -2,8 +2,8 @@ import React from "react";
 import { motion } from "framer-motion";
 import SectionHeader from "../ui/SectionHeader";
 import { itemVariants, sectionVariants, staggerContainer } from "../ui/motion";
-import { profile, stats, summary } from "../../data/portfolioData";
-import jissaImage from "../../assets/images/jissa.jpg";
+import { profile, summary } from "../../data/portfolioData";
+import jissaImage from "../../assets/images/jissa2.jpg.jpeg";
 
 interface AboutProps {
   sectionRef: React.RefObject<HTMLElement | null> ;
@@ -30,28 +30,9 @@ export default function About({ sectionRef }: AboutProps) {
             <p className="text-lg leading-relaxed">
               {summary}
             </p>
-            <div className="flex flex-wrap gap-3">
-              {["Full Stack", "AI-Ready", "Design Systems", "API Craft"].map((item) => (
-                <span
-                  key={item}
-                  className="rounded-full border border-[var(--border-color)] bg-[var(--bg-secondary)]/50 px-4 py-2 text-xs uppercase tracking-[0.2em] text-[var(--text-secondary)]"
-                >
-                  {item}
-                </span>
-              ))}
-            </div>
+            
             <div className="grid gap-4 sm:grid-cols-3">
-              {stats.map((stat) => (
-                <div
-                  key={stat.label}
-                  className="rounded-2xl border border-[var(--border-color)] bg-[var(--bg-secondary)]/50 px-4 py-3 text-center backdrop-blur"
-                >
-                  <p className="text-2xl font-semibold text-[var(--text-primary)]">{stat.value}</p>
-                  <p className="text-xs uppercase tracking-[0.2em] text-[var(--text-tertiary)]">
-                    {stat.label}
-                  </p>
-                </div>
-              ))}
+              
             </div>
           </motion.div>
 

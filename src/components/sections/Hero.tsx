@@ -1,8 +1,8 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { ChevronDown, Download, Mail } from "lucide-react";
+import { ChevronDown, Download, Mail, Github, Linkedin, Code2 } from "lucide-react";
 import { itemVariants, staggerContainer } from "../ui/motion";
-import { links, profile, stats } from "../../data/portfolioData";
+import { links, profile, stats, type Stat } from "../../data/portfolioData";
 import jissaImage from "../../assets/images/jissa.jpg";
 
 interface HeroProps {
@@ -68,6 +68,36 @@ export default function Hero({ onContactClick, sectionRef }: HeroProps) {
 
             <motion.div
               variants={itemVariants}
+              className="mt-6 flex gap-4"
+            >
+              <a
+                href={links.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex h-11 w-11 items-center justify-center rounded-full border border-[var(--border-color)] bg-[var(--bg-secondary)]/50 text-[var(--text-secondary)] backdrop-blur transition hover:border-[var(--accent-primary)] hover:text-[var(--text-primary)] hover:bg-[var(--bg-secondary)]"
+              >
+                <Github size={20} />
+              </a>
+              <a
+                href={links.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex h-11 w-11 items-center justify-center rounded-full border border-[var(--border-color)] bg-[var(--bg-secondary)]/50 text-[var(--text-secondary)] backdrop-blur transition hover:border-[var(--accent-primary)] hover:text-[var(--text-primary)] hover:bg-[var(--bg-secondary)]"
+              >
+                <Linkedin size={20} />
+              </a>
+              <a
+                href={links.leetcode}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex h-11 w-11 items-center justify-center rounded-full border border-[var(--border-color)] bg-[var(--bg-secondary)]/50 text-[var(--text-secondary)] backdrop-blur transition hover:border-[var(--accent-primary)] hover:text-[var(--text-primary)] hover:bg-[var(--bg-secondary)]"
+              >
+                <Code2 size={20} />
+              </a>
+            </motion.div>
+
+            <motion.div
+              variants={itemVariants}
               className="mt-10 flex flex-wrap gap-4 text-sm text-[var(--text-secondary)]"
             >
               <span className="rounded-full border border-[var(--border-color)] bg-[var(--bg-secondary)]/50 px-4 py-2 backdrop-blur">
@@ -91,7 +121,7 @@ export default function Hero({ onContactClick, sectionRef }: HeroProps) {
               variants={itemVariants}
               className="mt-10 grid gap-4 sm:grid-cols-3"
             >
-              {stats.map((stat) => (
+              {stats.map((stat: Stat) => (
                 <div
                   key={stat.label}
                   className="rounded-2xl border border-[var(--border-color)] bg-[var(--bg-secondary)]/50 px-4 py-3 text-center backdrop-blur"
