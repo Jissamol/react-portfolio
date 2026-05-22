@@ -69,6 +69,7 @@ export const links = {
   github: "https://github.com/Jissamol",
   leetcode: "https://leetcode.com/u/Jissamol/",
   resume: "/documents/Jissamol.pdf",
+  email: "jissamolbenny@gmail.com", // Update with your actual email
 };
 
 export const summary =
